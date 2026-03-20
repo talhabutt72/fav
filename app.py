@@ -225,7 +225,7 @@ if journey_val == 'The Start':
     st.write("Where it all started. 11/13/2025 (Best day of my life).")
 elif journey_val == 'The Missed Call':
     st.markdown("#### 📞 The Missed Call")
-    st.write("A mistake, but it changed everything for me (12/1/2026 3:51 PM).")
+    st.write("Just mistake, but it hit me hard dono why (12/1/2026 3:51 PM).")
 elif journey_val == 'Much More':
     st.markdown("#### ❤️ There are much more memories")
 elif journey_val == 'Today':
