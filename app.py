@@ -159,18 +159,25 @@ if st.button("Click for a reason I love you"):
     st.success(f"**{random_reason}**")
 
 st.divider()
-st.markdown("### 🌍 Our Hearts, Two Timezones")
+my_tz = pytz.timezone("Asia/Karachi")
+# Rofiqah is 3 hours ahead of Pakistan (Asia/Singapore or Asia/Kuala_Lumpur)
+her_tz = pytz.timezone("Asia/Singapore") 
+
+# 2. Get the current time for those specific zones
+my_time = datetime.datetime.now(my_tz)
+her_time = datetime.datetime.now(her_tz)
 
 col_time1, col_time2 = st.columns(2)
 
 with col_time1:
-    st.markdown("**My Time**")
-    st.subheader(datetime.datetime.now().strftime("%I:%M %p"))
+    st.markdown("**My Time (PKT)**")
+    # Using my_time instead of datetime.now()
+    st.subheader(my_time.strftime("%I:%M %p"))
     st.caption("Thinking of you...")
 
 with col_time2:
-    her_time = datetime.datetime.now() + datetime.timedelta(hours=3) 
     st.markdown(f"**{HER_NAME}'s Time**")
+    # Using her_time instead of datetime.now()
     st.subheader(her_time.strftime("%I:%M %p"))
     st.caption("My favorite person's world.")
 
